@@ -1,0 +1,27 @@
+<!-- customer-table.component.html -->
+<div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Customer Name</th>
+          <th>Mobile Number</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (customer of customers$ | async; track customer.id; let i = $index) {
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ customer.name || 'N/A' }}</td>
+          <td>{{ customer.mobile || 'N/A' }}</td>
+          <td>{{ customer.email || 'N/A' }}</td>
+          <td>
+            <button class="action-button">Generate</button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,99 @@
+/* customer-table.component.scss */
+.table-container {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 20px;
+    border-radius: 4px;
+    overflow-x: auto; // Horizontal scrolling for mobile
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    background: white;
+    
+    // Add scrollbar styling for better UX
+    &::-webkit-scrollbar {
+      height: 8px;
+      background: #f1f1f1;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+  
+    table {
+      width: 100%;
+      min-width: 600px; // Minimum table width before scrolling
+      border-collapse: collapse;
+      
+      th, td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+        border-right: 1px solid #e0e0e0;
+        white-space: nowrap; // Prevent text wrapping
+        
+        &:last-child {
+          border-right: none;
+        }
+      }
+  
+      th {
+        background-color: #78a5ed;
+        color: #333;
+        font-weight: 600;
+        position: sticky;
+        left: 0; // Keep header sticky during horizontal scroll
+      }
+  
+      tr:not(:last-child) {
+        border-bottom: 1px solid #f6f3f3;
+      }
+  
+      .action-button {
+        padding: 6px 12px;
+        background: #2196F3;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: background 0.2s;
+        margin: 2px 8px 2px 0;
+  
+        &:hover {
+          background: #1976D2;
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      margin: 10px;
+      border-radius: 0;
+      box-shadow: none;
+      
+      table {
+        min-width: 100%; // Full width on mobile
+        
+        th, td {
+          padding: 10px 8px;
+          font-size: 0.9em; // Smaller text on mobile
+        }
+        
+        .action-button {
+          padding: 4px 8px;
+          font-size: 0.8em;
+        }
+      }
+    }
+  
+    @media (max-width: 480px) {
+      table {
+        th, td {
+          padding: 8px 6px;
+          font-size: 0.85em;
+        }
+        
+        .action-button {
+          padding: 3px 6px;
+        }
+      }
+    }
+  }
