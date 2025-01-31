@@ -1,4 +1,4 @@
-Instrucitons:
+# Customer Information Management System
 ## Prerequisites
 - Node.js v18+
 - Angular CLI v19
