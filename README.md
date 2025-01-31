@@ -5,7 +5,7 @@ Prerequisites
 ```bash
 npm install -g @angular/cli@latest
 
-Installation:
+#Installation:
 1) Clone repository
 git clone https://github.com/your-username/customer-info.git
 cd customer-info
