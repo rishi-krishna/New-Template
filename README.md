@@ -1,5 +1,5 @@
 # Customer Information Management System
-## Prerequisites
+Prerequisites
 - Node.js v18+
 - Angular CLI v19
 ```bash
